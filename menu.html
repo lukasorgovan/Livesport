@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Live Sport menu</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="main.css">
+		<!-- Serving a little script from genius Remy Sharp that generates all of the new HTML5 elements for IEs. -->
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+			</script>
+		<![endif]-->
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<ul id="topnav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Browse sports <span class="arrow">&#59228;</span></a>
+						<div id="inner">
+							<ul>
+								<li><a href="#">Boxing <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>BoxNation</li>
+										<li>Prizefighter</li>
+									</ul>
+								</li>
+								<li><a href="#">Cricket <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>Big Bash T20 Cricket</li>
+									</ul>
+								</li>
+								<li><a href="#">Darts <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>PDC</li>
+									</ul>
+								</li>
+								<li><a href="#">Football <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>AFC</li>
+										<li>A League</li>
+										<li>Chinese Super League</li>
+										<li>Eredivisie</li>
+										<li>J League</li>
+										<li>Soccer</li>
+									</ul>
+								</li>
+								<li><a href="#">Handball <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>IHF</li>
+									</ul>
+								</li>
+								<li><a href="#">Hockey <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>FIH</li>
+									</ul>
+								</li>
+							</ul>
+							<ul>
+								<li><a href="#">Martial arts <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>FIGHTCODE</li>
+										<li>ONEFC</li>
+									</ul>
+								</li>
+								<li><a href="#">Netball <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>ANZ Netball</li>
+									</ul>
+								</li>
+								<li><a href="#">Pool <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>Pool</li>
+									</ul>
+								</li>
+								<li><a href="#">Rugby union <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>Super Rugby</li>
+										<li>The Rugby Championship</li>
+									</ul>
+								</li>
+								<li><a href="#">Snooker <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>World Snooker</li>
+									</ul>
+								</li>
+								<li><a href="#">Squash <span class="arrow">&#59228;</span></a>
+									<ul class="hidden">
+										<li>PSA</li>
+									</ul>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">stvrta</a></li>
+				</ul>
+
+			</nav>
+		</header>
+
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script>
+			$('#inner > ul > li').click(function() {
+				$('ul', this).slideToggle('fast');
+				$('span', this).toggleClass('arrow-up');
+				
+				if ($('span', this).is('.arrow-up')) {
+					$('span', this).html('&#59231;');
+				}
+				else { 
+					$('span', this).html('&#59228;');
+				}	
+			});
+			
+		</script>
+	</body>
+</html>
