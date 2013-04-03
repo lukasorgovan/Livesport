@@ -35,6 +35,7 @@ a {
 	position: absolute;
 	display: none;
 	top: 103px;
+	padding-bottom: 10px;
 }
 #inner > ul {
 	float: left;
@@ -49,9 +50,6 @@ a {
 }
 #topnav > li:hover > a {
 	color: rgba(0,180,255,1);
-}
-#inner > ul > li > ul {
-	
 }
 #inner > ul > li > ul > li {
 	padding: 5px 0 5px 25px;
@@ -75,4 +73,14 @@ a {
 	font-family: 'Entypo', Arial, sans-serif;
 	font-size: 18px;
 	line-height: 12px;
+}
+#colapse {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	padding: 10px 0 15px 10px;
+	font-size: 12px;
+	background-color: rgba(0,180,255,1);
+	margin-top: 15px;
+	position: ;
 }
