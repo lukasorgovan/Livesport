@@ -115,6 +115,16 @@
 					$('span', this).html('&#59228;');
 				}	
 			});
+			$('#colapse').click(function() {
+				if($('#colapse').text() == 'Expand All') {
+					$('#inner > ul > li > ul').show('fast');
+					$(this).text('Colapse All');
+				}
+				else {
+					$('#inner > ul > li > ul').hide('fast');
+					$(this).text('Expand All');
+				}
+			});
 			
 		</script>
 	</body>
