@@ -20,9 +20,14 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Browse sports <span class="arrow">&#59228;</span></a>
 						<div id="inner">
-							<span id="colapse">Expand All</span>
-							<ul>
-								<li><a href="#">Boxing <span class="arrow">&#59228;</span></a>
+							<div class="separator">
+								<span id="colapse">Expand All</span>
+								<form id="searchbox">
+									<input type="text" type="search" placeholder="search" name="search" id="search"/>
+								</form>
+							</div>
+							<ul class="specialna">
+								<li class="nova"><a href="#">Boxing <span class="arrow">&#59228;</span></a>
 									<ul class="hidden">
 										<li>BoxNation</li>
 										<li>Prizefighter</li>
@@ -124,6 +129,12 @@
 					$('#inner > ul > li > ul').hide('fast');
 					$(this).text('Expand All');
 				}
+			});
+			$('#search').keyup(function() {
+				var searchtext = $('#search').val();
+				var element = $('#inner li:contains("'+searchtext+'")').parent().show('fast');
+				$('#inner > ul > li > ul').not(element).hide('fast');
+				return false;
 			});
 			
 		</script>
