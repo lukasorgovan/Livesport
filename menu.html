@@ -19,14 +19,14 @@
 					<li><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Browse sports <span class="arrow">&#59228;</span></a>
-						<div id="inner">
+						<div class="inner">
 							<div class="separator">
 								<span id="colapse">Expand All</span>
 								<form id="searchbox">
 									<input type="search" placeholder="search" name="search" id="search"/>
 								</form>
 							</div>
-							<ul class="specialna">
+							<ul class="innernav">
 								<li class="nova"><a href="#">Boxing <span class="arrow">&#59228;</span></a>
 									<ul class="hidden">
 										<li>BoxNation</li>
@@ -64,7 +64,7 @@
 									</ul>
 								</li>
 							</ul>
-							<ul>
+							<ul class="innernav">
 								<li><a href="#">Martial arts <span class="arrow">&#59228;</span></a>
 									<ul class="hidden">
 										<li>FIGHTCODE</li>
@@ -109,7 +109,7 @@
 		
 		<script src="js/jquery-1.9.1.min.js"></script>
 		<script>
-			$('#inner > ul > li').click(function() {
+			$('.inner > ul > li').click(function() {
 				$('ul', this).slideToggle('fast');
 				$('span', this).toggleClass('arrow-up');
 				
@@ -122,11 +122,11 @@
 			});
 			$('#colapse').click(function() {
 				if($('#colapse').text() == 'Expand All') {
-					$('#inner > ul > li > ul').show('fast');
+					$('.inner > ul > li > ul').show('fast');
 					$(this).text('Colapse All');
 				}
 				else {
-					$('#inner > ul > li > ul').hide('fast');
+					$('.inner > ul > li > ul').hide('fast');
 					$(this).text('Expand All');
 				}
 			});
@@ -135,8 +135,8 @@
 };
 			$('#search').keyup(function() {
 				var searchtext = $('#search').val();
-				var element = $('#inner li:contains("'+searchtext+'")').parent().show('fast');
-				$('#inner > ul > li > ul').not(element).hide('fast');
+				var element = $('.inner li:contains("'+searchtext+'")').parent().show('fast');
+				$('.inner > ul > li > ul').not(element).hide('fast');
 				return false;
 			});
 			
